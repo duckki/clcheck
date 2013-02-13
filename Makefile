@@ -22,7 +22,7 @@
 ######################################################################
 
 TARGET=clcheck
-SRCDIR=.
+SRCDIR=src
 SRCS=main.cpp parser.cpp solver.cpp
 
 # 32-bit target for comparison with vercheck
