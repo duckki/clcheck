@@ -32,16 +32,13 @@ int eprintf( const char* fmt, ... )
 #define	ASSERTE( x, s )	if( !(x) ) { fprintf( stderr, "assertion faild at %s(%d) : %s -> %s\n", __FILE__, __LINE__, #x, s ); abort(); }
 #define	TRACE	(!debugMode)? 0: eprintf
 #define	TRACE_CLAUSE( c )	((!debugMode)? 0: print_readable_clause( stderr, c ))
-//#define	PROGRESS			TRACE
 #define	PROGRESS		(!verboseMode || debugMode)? 0: eprintf
-//#define	PROGRESS		eprintf
 #else
 #define	ASSERT( x )
 #define	ASSERTE( x, s )
 #define	TRACE(...)
 #define	TRACE_CLAUSE( c )
 #define	PROGRESS		(!verboseMode)? 0: eprintf
-//#define	PROGRESS		eprintf
 #endif
 
 #ifdef	DEBUG
